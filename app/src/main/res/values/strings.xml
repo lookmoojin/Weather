@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="search_hint">Search for a city name</string>
+    <string name="humidity">Humidity</string>
+    <string name="feels_like">Feels like</string>
+    <string name="now">Now</string>
+    <string name="error">Something went wrong.\nPlease try again.</string>
+    <string name="celsius">°C</string>
+    <string name="fahrenheit">°F</string>
+</resources>

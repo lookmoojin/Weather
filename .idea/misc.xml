@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/background_gray.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/bg_search_white.xml" value="0.1205" />
+        <entry key="app/src/main/res/drawable/ic_close_circle_black.xml" value="0.1205" />
+        <entry key="app/src/main/res/drawable/ic_search_black.xml" value="0.1205" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2682291666666667" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_weather.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/view.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/view_current_weather.xml" value="0.17572463768115942" />
+        <entry key="app/src/main/res/layout/view_hourly.xml" value="0.17572463768115942" />
+        <entry key="app/src/main/res/layout/view_item_weather.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/view_shelf.xml" value="0.17572463768115942" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

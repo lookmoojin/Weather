@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SwitchStyle" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#FFC107</item>
+        <item name="colorSwitchThumbNormal">#F89088</item>
+    </style>
+</resources>

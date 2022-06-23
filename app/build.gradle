@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+}
+
+apply from: "${project.rootDir}/gradle/dependencies.gradle"
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.piglet.weather"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField 'String', 'API_HOST_WEATHER', '"https://api.openweathermap.org/"'
+        buildConfigField 'String', 'API_KEY', '"1717494e4099d75861f0db6ba4701fcd"'
+        buildConfigField 'String', 'DOMAIN_IMAGE', '"http://openweathermap.org/img/wn/"'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+        unitTests.all {
+            useJUnitPlatform()
+            setIgnoreFailures(false)
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    AndroidSupport()
+    Coroutines()
+    ImageLoader()
+    Koin()
+    LifeCycle()
+    Navigation()
+    Okhttp()
+    Retrofit()
+    Timber()
+    UnitTesting()
+
+    testImplementation 'junit:junit:4.13.2'
+}
+
+configurations {
+    all {
+        resolutionStrategy {
+            exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
+        }
+    }
+}

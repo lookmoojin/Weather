@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Large Title -->
+    <style name="LargeTitle">
+        <item name="android:textSize">60sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="LargeTitle.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="LargeTitle.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- End Large Title -->
+
+    <!-- Title -->
+    <style name="Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="Title.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Title.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="Title.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Title.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Title.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!-- End Title -->
+
+    <!-- Header 1 -->
+    <style name="Header1">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="Header1.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Header1.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="Header1.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Header1.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Header1.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Header1.Bold.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <!-- End Header 1 -->
+
+    <!-- Header 2 -->
+    <style name="Header2">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">0sp</item>
+    </style>
+
+    <style name="Header2.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Header2.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Header2.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Header2.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Header2.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Header2.Bold.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <!-- End Header 2-->
+
+    <!-- Header 3 -->
+    <style name="Header3">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Header3.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Header3.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Header3.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Header3.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Header3.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Header3.Bold.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <!-- End Header 3 -->
+
+    <!-- Header 4 -->
+    <style name="Header4">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Header4.White">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!-- End Header 4 -->
+
+    <!-- Body -->
+    <style name="Body">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Body.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Body.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Body.Bold">
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Body.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Body.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- End Body-->
+
+    <!-- Small -->
+    <style name="Small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Small.Black">
+        <item name="android:lineSpacingExtra">0.25sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Small.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Small.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Small.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Small.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- End Small -->
+
+    <!-- Extra Small -->
+    <style name="ExtraSmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="ExtraSmall.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ExtraSmall.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ExtraSmall.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="ExtraSmall.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ExtraSmall.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!-- End Extra Small -->
+
+    <!-- Tiny Small -->
+    <style name="TinySmall">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="TinySmall.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TinySmall.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TinySmall.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="TinySmall.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TinySmall.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- End Tiny Small -->
+
+</resources>
