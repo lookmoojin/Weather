@@ -8,6 +8,7 @@ import com.piglet.weather.data.model.response.WeatherCurrentModelResponse
 import com.piglet.weather.data.model.response.WeatherModelResponse
 import com.piglet.weather.data.repository.WeatherRepository
 import com.piglet.weather.domain.DateTimeInterface
+import com.piglet.weather.domain.usecase.GetWeatherUseCaseImpl.Companion.UNIT_FAHRENHEIT
 import com.piglet.weather.extension.collectSafe
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
@@ -19,9 +20,17 @@ import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNull
+
+interface GetWeatherUseCaseTestCase {
+    fun execute_mapData_returnWeatherModel()
+    fun execute_mapData_isFahrenheitUnits_returnFalse()
+    fun execute_mapData_currentNull_returnNull()
+    fun execute_mapData_hourlyListNull_returnNull()
+}
 
 @ExperimentalCoroutinesApi
-class GetWeatherUseCaseTest {
+class GetWeatherUseCaseTest : GetWeatherUseCaseTestCase {
 
     @MockK
     lateinit var weatherRepository: WeatherRepository
@@ -45,10 +54,16 @@ class GetWeatherUseCaseTest {
             dateTimeInterface,
             context
         )
+        every { context.resources } returns resources
+        every { resources.getString(R.string.humidity) } returns "humidity"
+        every { resources.getString(R.string.feels_like) } returns "feels_like"
+        every { resources.getString(R.string.now) } returns "now"
+        every { dateTimeInterface.getCurrentTimeMillis() } returns 11111111000
+        every { dateTimeInterface.convertTimeMillisToDate(any(), any()) } returns "04"
     }
 
     @Test
-    fun execute_mapData_returnWeatherModel() = runTest {
+    override fun execute_mapData_returnWeatherModel() = runTest {
         val mockResponse = WeatherModelResponse(
             latitude = 11.11,
             longitude = 22.22,
@@ -90,12 +105,6 @@ class GetWeatherUseCaseTest {
         coEvery {
             weatherRepository.getWeather(any(), any(), any())
         } returns flowOf(mockResponse)
-        every { context.resources } returns resources
-        every { resources.getString(R.string.humidity) } returns "humidity"
-        every { resources.getString(R.string.feels_like) } returns "feels_like"
-        every { resources.getString(R.string.now) } returns "now"
-        every { dateTimeInterface.getCurrentTimeMillis() } returns 11111111000
-        every { dateTimeInterface.convertTimeMillisToDate(any(), any()) } returns "04"
 
         getWeatherUseCase.execute("bangkok", 12.34, 12.34)
             .collectSafe {
@@ -130,6 +139,77 @@ class GetWeatherUseCaseTest {
                     it.weatherHourlyList?.get(1)?.icon
                 )
                 assertEquals("04", it.weatherHourlyList?.get(1)?.time)
+            }
+    }
+
+    @Test
+    override fun execute_mapData_isFahrenheitUnits_returnFalse() = runTest {
+        val mockResponse = WeatherModelResponse(
+            latitude = 11.11,
+            longitude = 22.22,
+            current = null,
+            hourlyList = null
+        )
+        coEvery {
+            weatherRepository.getWeather(any(), any(), any())
+        } returns flowOf(mockResponse)
+
+        getWeatherUseCase.execute("bangkok", 12.34, 12.34, UNIT_FAHRENHEIT)
+            .collectSafe {
+                assertEquals(false, it.isCelsiusUnits)
+            }
+    }
+
+    @Test
+    override fun execute_mapData_currentNull_returnNull() = runTest {
+        val mockResponse = WeatherModelResponse(
+            latitude = 11.11,
+            longitude = 22.22,
+            current = null,
+            hourlyList = listOf()
+        )
+        coEvery {
+            weatherRepository.getWeather(any(), any(), any())
+        } returns flowOf(mockResponse)
+
+        getWeatherUseCase.execute("bangkok", 12.34, 12.34)
+            .collectSafe {
+                assertEquals(null, it.weatherCurrentModel?.temp)
+                assertEquals(null, it.weatherCurrentModel?.description)
+                assertEquals(
+                    "${GetWeatherUseCaseImpl.DOMAIN_ICON}null${GetWeatherUseCaseImpl.PNG}",
+                    it.weatherCurrentModel?.icon
+                )
+                assertEquals(2, it.weatherDetailModelList?.size)
+                assertEquals("humidity", it.weatherDetailModelList?.first()?.title)
+                assertEquals(null, it.weatherDetailModelList?.first()?.detail)
+                assertEquals("feels_like", it.weatherDetailModelList?.get(1)?.title)
+                assertEquals(null, it.weatherDetailModelList?.get(1)?.detail)
+                assertEquals(0, it.weatherHourlyList?.size)
+            }
+    }
+
+    @Test
+    override fun execute_mapData_hourlyListNull_returnNull() = runTest {
+        val mockResponse = WeatherModelResponse(
+            latitude = 11.11,
+            longitude = 22.22,
+            current = null,
+            hourlyList = null
+        )
+        coEvery {
+            weatherRepository.getWeather(any(), any(), any())
+        } returns flowOf(mockResponse)
+
+        getWeatherUseCase.execute("bangkok", 12.34, 12.34)
+            .collectSafe {
+                assertEquals("null", it.weatherCurrentModel?.time)
+                assertEquals(2, it.weatherDetailModelList?.size)
+                assertEquals("humidity", it.weatherDetailModelList?.first()?.title)
+                assertEquals(null, it.weatherDetailModelList?.first()?.detail)
+                assertEquals("feels_like", it.weatherDetailModelList?.get(1)?.title)
+                assertEquals(null, it.weatherDetailModelList?.get(1)?.detail)
+                assertEquals(null, it.weatherHourlyList?.size)
             }
     }
 }
