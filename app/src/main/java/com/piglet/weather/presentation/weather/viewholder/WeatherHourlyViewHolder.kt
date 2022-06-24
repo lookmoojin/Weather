@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.piglet.weather.databinding.ViewHourlyBinding
 import com.piglet.weather.domain.model.WeatherCurrentModel
-import com.piglet.weather.extension.load
+import com.piglet.foundation.extension.load
 
 class WeatherHourlyViewHolder(
     private val binding: ViewHourlyBinding

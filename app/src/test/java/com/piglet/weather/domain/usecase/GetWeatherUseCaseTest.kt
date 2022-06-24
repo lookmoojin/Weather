@@ -9,7 +9,7 @@ import com.piglet.weather.data.model.response.WeatherModelResponse
 import com.piglet.weather.data.repository.WeatherRepository
 import com.piglet.weather.domain.DateTimeInterface
 import com.piglet.weather.domain.usecase.GetWeatherUseCaseImpl.Companion.UNIT_FAHRENHEIT
-import com.piglet.weather.extension.collectSafe
+import com.piglet.foundation.extension.collectSafe
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.every
@@ -20,7 +20,6 @@ import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertNull
 
 interface GetWeatherUseCaseTestCase {
     fun execute_mapData_returnWeatherModel()

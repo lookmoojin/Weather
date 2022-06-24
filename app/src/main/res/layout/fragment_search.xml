@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="@color/background">
+    android:background="@color/background"
+    android:padding="24dp">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/titleTextView"
@@ -28,7 +28,6 @@
         android:hint="@string/search_hint"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:text="bangkok"
         android:textCursorDrawable="@drawable/cursor_black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

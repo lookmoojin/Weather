@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.piglet.weather.R
 import com.piglet.weather.databinding.FragmentSearchBinding
-import com.piglet.weather.extension.*
+import com.piglet.foundation.extension.*
 import com.piglet.weather.navigation.Router
 import org.koin.androidx.scope.fragmentScope
 import org.koin.core.scope.Scope

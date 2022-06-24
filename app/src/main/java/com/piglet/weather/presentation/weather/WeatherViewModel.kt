@@ -2,15 +2,15 @@ package com.piglet.weather.presentation.weather
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.piglet.weather.base.ScopedViewModel
-import com.piglet.weather.base.SingleLiveEvent
+import com.piglet.foundation.base.ScopedViewModel
+import com.piglet.foundation.base.SingleLiveEvent
 import com.piglet.weather.domain.model.WeatherModel
 import com.piglet.weather.domain.usecase.GetLatLongUseCase
 import com.piglet.weather.domain.usecase.GetWeatherUseCase
 import com.piglet.weather.domain.usecase.GetWeatherUseCaseImpl.Companion.UNIT_CELSIUS
 import com.piglet.weather.domain.usecase.GetWeatherUseCaseImpl.Companion.UNIT_FAHRENHEIT
-import com.piglet.weather.extension.CoroutineDispatcherProvider
-import com.piglet.weather.extension.collectSafe
+import com.piglet.foundation.extension.CoroutineDispatcherProvider
+import com.piglet.foundation.extension.collectSafe
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 

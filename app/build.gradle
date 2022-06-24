@@ -4,8 +4,6 @@ plugins {
     id 'kotlin-android'
 }
 
-apply from: "${project.rootDir}/gradle/dependencies.gradle"
-
 android {
     compileSdk 32
 
@@ -52,19 +50,20 @@ android {
 }
 
 dependencies {
+    api project(':foundation')
 
-    AndroidSupport()
-    Coroutines()
-    ImageLoader()
-    Koin()
-    LifeCycle()
-    Navigation()
-    Okhttp()
-    Retrofit()
-    Timber()
-    UnitTesting()
-
-    testImplementation 'junit:junit:4.13.2'
+//    AndroidSupport()
+//    Coroutines()
+//    ImageLoader()
+//    Koin()
+//    LifeCycle()
+//    Navigation()
+//    Okhttp()
+//    Retrofit()
+//    Timber()
+//    UnitTesting()
+//
+//    testImplementation 'junit:junit:4.13.2'
 }
 
 configurations {

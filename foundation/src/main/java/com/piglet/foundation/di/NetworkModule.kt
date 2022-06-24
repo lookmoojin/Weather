@@ -1,9 +1,9 @@
-package com.piglet.weather.di
+package com.piglet.foundation.di
 
 import com.piglet.weather.domain.DateTimeInterface
 import com.piglet.weather.domain.DateTimeUtil
-import com.piglet.weather.extension.CoroutineDispatcherProvider
-import com.piglet.weather.extension.DefaultCoroutineDispatcherProvider
+import com.piglet.foundation.extension.CoroutineDispatcherProvider
+import com.piglet.foundation.extension.DefaultCoroutineDispatcherProvider
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Converter

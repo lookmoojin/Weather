@@ -1,4 +1,4 @@
-package com.piglet.weather.base
+package com.piglet.foundation.base
 
 import android.os.Looper
 import androidx.annotation.MainThread

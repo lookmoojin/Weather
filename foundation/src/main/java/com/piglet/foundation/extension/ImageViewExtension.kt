@@ -1,4 +1,4 @@
-package com.piglet.weather.extension
+package com.piglet.foundation.extension
 
 import android.content.Context
 import android.graphics.Bitmap

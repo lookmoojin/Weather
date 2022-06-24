@@ -1,4 +1,4 @@
-package com.piglet.weather.extension
+package com.piglet.foundation.extension
 
 import android.net.Uri
 import android.os.Bundle

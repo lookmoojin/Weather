@@ -1,6 +1,7 @@
-package com.piglet.weather.api
+package com.piglet.foundation.api
 
 import okhttp3.ConnectionPool
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Protocol
 import retrofit2.Converter
@@ -9,9 +10,9 @@ import java.util.concurrent.TimeUnit
 
 open class BaseHttpClient {
 
-    fun create(): OkHttpClient {
+    fun create(interceptor: Interceptor): OkHttpClient {
         return baseOkHttpClient().newBuilder()
-            .addInterceptor(FeaturePathInterceptor())
+            .addInterceptor(interceptor)
             .build()
     }
 

@@ -1,4 +1,4 @@
-package com.piglet.weather.extension
+package com.piglet.foundation.extension
 
 import androidx.annotation.WorkerThread
 import kotlinx.coroutines.CancellableContinuation

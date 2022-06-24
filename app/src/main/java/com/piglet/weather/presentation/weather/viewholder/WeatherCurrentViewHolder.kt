@@ -5,9 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.piglet.weather.databinding.ViewCurrentWeatherBinding
 import com.piglet.weather.domain.model.WeatherModel
-import com.piglet.weather.extension.gone
-import com.piglet.weather.extension.load
-import com.piglet.weather.extension.visible
+import com.piglet.foundation.extension.gone
+import com.piglet.foundation.extension.load
+import com.piglet.foundation.extension.visible
 
 class WeatherCurrentViewHolder(
     private val binding: ViewCurrentWeatherBinding,

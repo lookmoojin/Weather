@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.GridLayoutManager
 import com.piglet.weather.R
 import com.piglet.weather.databinding.FragmentWeatherBinding
-import com.piglet.weather.extension.gone
-import com.piglet.weather.extension.visible
+import com.piglet.foundation.extension.gone
+import com.piglet.foundation.extension.visible
 import com.piglet.weather.presentation.weather.adapter.WeatherCurrentAdapter
 import com.piglet.weather.presentation.weather.adapter.WeatherDetailAdapter
 import com.piglet.weather.presentation.weather.adapter.WeatherShelfAdapter

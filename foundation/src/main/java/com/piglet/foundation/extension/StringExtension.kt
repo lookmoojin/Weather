@@ -1,4 +1,4 @@
-package com.piglet.weather.extension
+package com.piglet.foundation.extension
 
 fun String.ifNotNullOrEmpty(block: ((String) -> Unit)): String {
     if (isNotEmpty()) block(this)

@@ -1,7 +1,7 @@
-package com.piglet.weather.base
+package com.piglet.foundation.base
 
 import androidx.lifecycle.ViewModel
-import com.piglet.weather.extension.LaunchSafe
+import com.piglet.foundation.extension.LaunchSafe
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.cancellation.CancellationException

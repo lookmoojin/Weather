@@ -1,8 +1,10 @@
 package com.piglet.weather.di
 
+import com.piglet.foundation.api.ApiGsonBuilder
+import com.piglet.foundation.api.BaseHttpClient
+import com.piglet.foundation.di.NAMED_G_SON_CONVERTER
 import com.piglet.weather.BuildConfig
-import com.piglet.weather.api.ApiGsonBuilder
-import com.piglet.weather.api.BaseHttpClient
+import com.piglet.weather.api.FeaturePathInterceptor
 import com.piglet.weather.api.WeatherApiInterface
 import com.piglet.weather.data.repository.CacheWeatherRepository
 import com.piglet.weather.data.repository.CacheWeatherRepositoryImpl
@@ -26,7 +28,7 @@ val weatherModule = module {
 
     single<WeatherApiInterface> {
         ApiGsonBuilder(
-            okHttpClient = BaseHttpClient().create(),
+            okHttpClient = BaseHttpClient().create(FeaturePathInterceptor()),
             gsonConverterFactory = get(named(NAMED_G_SON_CONVERTER))
         ).build(BuildConfig.API_HOST_WEATHER)
     }

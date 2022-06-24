@@ -1,4 +1,4 @@
-package com.piglet.weather.api
+package com.piglet.foundation.api
 
 import okhttp3.OkHttpClient
 import java.security.SecureRandom
