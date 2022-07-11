@@ -19,5 +19,4 @@ dependencies {
     Okhttp()
     Retrofit()
     Timber()
-    UnitTesting()
 }

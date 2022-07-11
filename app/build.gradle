@@ -49,21 +49,11 @@ android {
     }
 }
 
+apply from: "${project.rootDir}/gradle/dependencies.gradle"
+
 dependencies {
     api project(':foundation')
-
-//    AndroidSupport()
-//    Coroutines()
-//    ImageLoader()
-//    Koin()
-//    LifeCycle()
-//    Navigation()
-//    Okhttp()
-//    Retrofit()
-//    Timber()
-//    UnitTesting()
-//
-//    testImplementation 'junit:junit:4.13.2'
+    UnitTesting()
 }
 
 configurations {
