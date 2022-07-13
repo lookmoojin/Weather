@@ -15,8 +15,6 @@
             android:id="@+id/action_searchFragment_to_weatherFragment"
             app:destination="@id/navigation_weather" />
 
-<!--        app:popUpTo="@id/searchFragment"-->
-<!--        app:popUpToInclusive="true"-->
     </fragment>
 
     <include app:graph="@navigation/navigation_weather" />

@@ -3,6 +3,7 @@ package com.piglet.weather.domain.usecase
 import com.piglet.weather.data.repository.WeatherRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 
 interface GetLatLongUseCase {
@@ -19,7 +20,7 @@ class GetLatLongUseCaseImpl(
 
     override fun execute(location: String?): Flow<Triple<String, Double, Double>> {
         return if (location.isNullOrBlank()) {
-            error(ERROR_LOCATION_BLANK)
+            flow { emit(error(ERROR_LOCATION_BLANK)) }
         } else {
             weatherRepository.getLatLong(location)
                 .filter {

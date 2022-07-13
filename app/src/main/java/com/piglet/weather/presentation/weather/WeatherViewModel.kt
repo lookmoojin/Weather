@@ -36,9 +36,6 @@ class WeatherViewModel(
                 .onStart {
                     showLoading.value = Unit
                 }
-                .catch {
-                    error.value = Unit
-                }
                 .flatMapConcat { (location, lat, lon) ->
                     getWeatherUseCase.execute(location, lat, lon)
                 }
